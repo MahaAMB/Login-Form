@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<!-- ------~~ HTML & CSS CODE ~~------ !--> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<title>Welcome Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+    
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(robotbanner.jpg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+    outline: 0;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background: #009A8F;
+    color: #fff;
+    font-family: cursive;
+    height: 40px;
+    width: 80px;
+    border-radius: 10%;
+    border-color: #d3d3d3;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #32AEA5;
+  color: white;
+}
+    
+    
+    .body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(./background.jpg);
+    background-size: cover;
+}
+
+.container {
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+}
+
+.container,
+.form__input,
+.form__button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success {
+    color: var(--color-success);
+}
+
+.form__message--error {
+    color: var(--color-error);
+}
+
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    position: center;
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.form__button:hover {
+    background: var(--color-primary-dark);
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+    
+.field .fas{
+  height: 50px;
+  width: 40px;
+  color: linear-gradient(#333,#222);
+  font-size: 20px;
+  line-height: 50px;
+  border: 1px solid #009579;
+  border-radius: 5px 0 0 5px;
+  background: #ffffff;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+</style>
+</head>
+    
+<body>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Welcome to Our Control Panel!</h1>
+    <p style="font-size:25px"><strong>But first, please login to confirm you are an authorized member</strong></p>
+  </div>
+</div> 
+    <form method="post">
+    <div  class="body">
+     <div class="container">
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="field">
+            <i class="fas fa-wifi"></i>
+            <div class="form__input-group">
+                <input type="text" class="form__input" name="ssid" autofocus placeholder="SSID" required>
+                 </div>
+                <div class="field">
+                  <div class="fas fa-lock"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password" name="psw" required>
+                </div>
+            </div>
+            <button type="submit" class="form__button"  name="LoginBtn">Continue</button>
+        
+        </form>
+    </div>
+        </div>
+        </form>    
+ </body> 
+</html>
